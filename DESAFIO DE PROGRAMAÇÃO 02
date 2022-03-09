@@ -1,1 +1,130 @@
 
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Capgemini{
+    public static void main(String[] args) {
+        
+        Scanner x = new Scanner(System.in);
+
+        
+// Questão 01
+// ----------------
+// A mediana de uma lista de números é basicamente o elemento que se 
+// encontra no meio da lista após a ordenação.
+// Dada uma lista de números com um número ímpar de elementos, 
+// desenvolva um algoritmo que encontre a mediana.
+
+//Entrada:
+//arr = [9, 2, 1, 4, 6]
+//Saída:
+//4
+
+
+int vetor [] = new int[5];
+
+for(int i=0;i<vetor.length;i++){
+    System.out.println("Informe o numero desejado: ");
+    vetor[i] = x.nextInt();
+}
+
+System.out.println();
+
+System.out.print("Vetor: [ ");
+for(int j=0;j<vetor.length;j++){
+    System.out.print(vetor[j] + " ");
+}
+System.out.print("]");
+System.out.println("\n");
+
+for(int k=0;k<vetor.length;k++ ){
+    for(int l=0;l<vetor.length;l++){
+        if(vetor[k] < vetor[l]){
+            int aux = vetor[l];
+            vetor[l] = vetor[k];
+            vetor[k] = aux;
+        }
+    }
+    
+}
+
+System.out.println();
+
+System.out.print("Vetor: [ ");
+for(int l=0;l<vetor.length;l++){
+    System.out.print(vetor[l] + " ");
+}
+System.out.print("]");
+System.out.println("\n");
+
+int metadeVet = (vetor.length/2);
+System.out.println("Elemento mediano do vetor: " + vetor[metadeVet]);
+System.out.println("\n");
+
+
+
+// Questão 02
+// ---------------
+// Dado um vetor de inteiros n e um inteiro qualquer x. 
+// Construa um algoritmo que determine o número de elementos 
+// pares do vetor que tem uma diferença igual ao valor de x.
+
+// Exemplo:
+// Entrada:
+// n = [1, 5, 3, 4, 2]
+// Saída:
+// 3
+
+
+System.out.println("Informe o tamanho do seu Vetor: ");
+int y = x.nextInt();
+
+int vet [] = new int[y];
+int cntPares = 0;
+
+
+for(int i=0;i<vet.length;i++){
+    System.out.println("Informe o número desejado: ");
+    vet[i] = x.nextInt();
+}
+
+System.out.println("Informe o número X para verificar pares ");
+int z = x.nextInt();
+
+for(int j=0;j<vet.length;j++){
+    for(int k=0;k<vet.length;k++){
+        if((vet[j] - vet[k] == z)){
+            cntPares+=1;
+        }
+    }
+}
+
+System.out.println("Os pares do vetor que possuem diferença igual ao valor " + z);
+System.out.println(cntPares);
+
+
+// Questão 03
+// ----------------
+// Um texto precisa ser encriptado usando o seguinte esquema. 
+// Primeiro, os espaços são removidos do texto. 
+// Então, os caracteres são escritos em um grid, no qual as linhas e colunas tem as seguintes regras:
+
+// * Considere T, como o tamanho do texto.
+// * Se certifique de que linhas x colunas >= .
+// * Se múltiplos grids satisfazem as condições, escolha aquele com a menor área.
+// * Escreva um algoritmo que ao receber uma string s, 
+// * mostre a mensagem encriptada de acordo com as regras descritas.
+
+// Exemplos:
+// Exemplo 1)
+
+// Entrada:
+// s = tenha um bom dia
+// Saída:
+// taoa eum nmd hbi
+
+
+
+
+    }
+}
