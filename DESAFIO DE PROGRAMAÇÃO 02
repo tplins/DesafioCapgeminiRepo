@@ -123,7 +123,54 @@ System.out.println(cntPares);
 // Saída:
 // taoa eum nmd hbi
 
+System.out.println("Informe a frase desejada: ");
+        String frase = x.nextLine();    
+        
+        char vetFraseSespaco [] = new char[frase.length()];
+        int cntFraseSespaco=0, tamMat = 0;
 
+        for(int i=0;i<frase.length();i++){
+
+            if(frase.charAt(i) != ' '){
+                cntFraseSespaco++;
+                vetFraseSespaco[i] = frase.charAt(i);
+            }
+
+            
+        }
+       
+        
+        double raizCnt = Math.round(Math.sqrt(cntFraseSespaco));
+        if(vetFraseSespaco.length<5){
+            tamMat = 2;
+        }else{
+            tamMat = (int)raizCnt+1;
+        }
+
+    
+
+        int z=0, k=0;
+        int matFraseCripto[][] = new int[tamMat][tamMat];
+    
+       while(z<vetFraseSespaco.length){
+            for(int j=0;j<tamMat;j++){ 
+                if(k<tamMat){
+                    if(z<=5){
+                        matFraseCripto[j][k] = vetFraseSespaco[z];
+                    }
+                }
+                z++;  
+            }
+            k++; 
+       }
+            
+       for(int m=0;m<tamMat;m++){
+            for(int n=0;n<tamMat;n++){
+                System.out.print(matFraseCripto[m][n]);
+            }
+            System.out.println();
+        }
+       
 
 
     }
